@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evil Banana Survival</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <section id="startMenu" class="menu">
+      <div class="menu__panel">
+        <p id="menuEyebrow" class="menu__eyebrow"></p>
+        <h1 id="menuTitle"></h1>
+        <p id="menuObjective"></p>
+        <div id="languageButtons" class="language-buttons" aria-label="Language selection"></div>
+        <button id="playButton" class="primary-button" type="button"></button>
+      </div>
+    </section>
+
+    <button id="pointerOverlay" class="pointer-overlay" type="button" hidden></button>
+
+    <main id="hud" class="hud" hidden>
+      <div class="hud__row">
+        <div id="scoreText" class="hud__pill"></div>
+        <div id="languageText" class="hud__pill"></div>
+        <div id="warningText" class="hud__pill hud__pill--warning"></div>
+        <button id="muteButton" class="hud__pill hud__button" type="button"></button>
+      </div>
+      <div class="stamina">
+        <span id="staminaLabel"></span>
+        <div class="stamina__track">
+          <div id="staminaFill" class="stamina__fill"></div>
+        </div>
+      </div>
+      <div id="interactionPrompt" class="interaction"></div>
+    </main>
+
+    <div id="redFlash" class="red-flash"></div>
+    <div id="jumpscareText" class="jumpscare" aria-live="assertive"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
